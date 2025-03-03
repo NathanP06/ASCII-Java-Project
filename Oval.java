@@ -7,12 +7,12 @@ public class Oval extends Shape {
 
     @Override
     public double getArea() {
-        return (((length / 2) ^ 2) * pi);
+        return (((length / 2) * (width / 2)) * pi);
     }
 
     @Override
     public double getPerimeter() {
-        return (length * pi);
+        return (pi * ( 3 * (length + width) - Math.sqrt(((3 * length) + width) * (length + (3 * width)))));
     }
 
     @Override

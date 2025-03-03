@@ -36,7 +36,7 @@ public class Main {
 
         //Finds the shape the user wants to be created and constructs, then prints it using the users inputs
 
-        //Rectangles && Squares
+        //Rectangles & Squares
         if (userShape.toLowerCase().equals("rectangle")){
 
             //Checks if rectangle is a square (length = width)
@@ -60,6 +60,32 @@ public class Main {
                 System.out.println("The perimeter is: " + userRectangle.getPerimeter());
                 System.out.println("The area is: " + userRectangle.getArea());
             }
+        }
+
+        //Ovals & Circles
+        if (userShape.toLowerCase().equals("oval")){
+
+            //Checks if oval is a circle
+            if (userLength == userWidth){
+                Circle userCircle = new Circle(userColor, userChar, userLength);
+
+                userCircle.draw();
+                System.out.println();
+                System.out.println("Shape Stats: ");
+                System.out.println("The perimeter is: " + userCircle.getPerimeter());
+                System.out.println("The area is: " + userCircle.getArea());                
+            }
+
+            //Any non-circles (ovals)
+            else {
+                Oval userOval = new Oval(userColor, userChar, userLength, userWidth);
+
+                userOval.draw();
+                System.out.println();
+                System.out.println("Shape Stats: ");
+                System.out.println("An estimate of this oval's perimeter is: " + userOval.getPerimeter());
+                System.out.println("The area is: " + userOval.getArea());
+            }            
         }
 
     }

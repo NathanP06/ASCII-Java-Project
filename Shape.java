@@ -21,7 +21,7 @@ public abstract class Shape {
         
         System.out.println("Generating your shape...");
         System.out.println("Imagine the shape you are about to see is " + color.toLowerCase() + ".");
-        System.out.println();
-                
+        System.out.println(); // prints blank line to seperate the shape from the rest of the text.
+
     }
 }
