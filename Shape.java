@@ -18,6 +18,10 @@ public abstract class Shape {
 
     //the "Draw" method which is also used by all classes under "shape".
     public void draw(){
+        
+        System.out.println("Generating your shape...");
         System.out.println("Imagine the shape you are about to see is " + color.toLowerCase() + ".");
+        System.out.println();
+                
     }
 }

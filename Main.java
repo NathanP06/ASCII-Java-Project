@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-        public static void main (String args[]){
+    public static void main (String args[]){
         Scanner scnr = new Scanner(System.in);
 
         //Prompts user for the shape
@@ -32,6 +32,7 @@ public class Main {
         scnr.close();
         System.out.println();
         System.out.println("--------------------------");
+    
 
         //Finds the shape the user wants to be created and constructs, then prints it using the users inputs
 

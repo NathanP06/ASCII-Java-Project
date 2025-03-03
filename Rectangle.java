@@ -16,10 +16,7 @@ public class Rectangle extends Shape {
     //Creates the shape
     @Override
     public void draw(){
-
-        System.out.println("Generating your shape...");
         super.draw();
-        System.out.println();
         
         //Prints the first line of the shape
         for (int i = 0; i < length; i++){
