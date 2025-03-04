@@ -8,8 +8,8 @@ public class Main {
         System.out.println("Please input the shape you wish to create.");
         String userShape = scnr.nextLine();
 
-        while (!userShape.toLowerCase().equals("rectangle")){
-            System.out.println("Invalid input, please select from the following: {Rectangle}.");
+        while (!userShape.toLowerCase().equals("rectangle") && !userShape.toLowerCase().equals("oval")){
+            System.out.println("Invalid input, please select from the following: {Rectangle, Oval}.");
             userShape = scnr.nextLine();
         }
 

@@ -18,5 +18,9 @@ public class Oval extends Shape {
     @Override
     public void draw(){
         super.draw();
+        
+        System.out.println(); // Goes to next line
+        System.out.println(); // Prints blank line
+        System.out.println("Your shape has been created!");
     }
 }
