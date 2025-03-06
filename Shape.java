@@ -25,9 +25,10 @@ public abstract class Shape {
 
     }
 
+    //the "stats" method which is used by all classes under "shape".
     public void stats(){
         System.out.println("Shape Stats: ");                
-        System.out.println("The perimeter is: " + getPerimeter());
-        System.out.println("The area is: " + getArea());        
+        System.out.println("The perimeter is: " + getPerimeter()); //gets and prints perimeter of shape
+        System.out.println("The area is: " + getArea()); //gets and prints perimeter of shape
     }
 }

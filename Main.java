@@ -54,7 +54,6 @@ public class Main {
 
                 userRectangle.draw();
                 System.out.println();
-                System.out.println("Shape Stats: ");
                 userRectangle.stats();
             }
         }
