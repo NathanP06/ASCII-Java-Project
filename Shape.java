@@ -24,4 +24,10 @@ public abstract class Shape {
         System.out.println(); // prints blank line to seperate the shape from the rest of the text.
 
     }
+
+    public void stats(){
+        System.out.println("Shape Stats: ");                
+        System.out.println("The perimeter is: " + getPerimeter());
+        System.out.println("The area is: " + getArea());        
+    }
 }

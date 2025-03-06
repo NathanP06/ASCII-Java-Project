@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Please input the shape you wish to create.");
         String userShape = scnr.nextLine();
 
-        while (!userShape.toLowerCase().equals("rectangle") && !userShape.toLowerCase().equals("oval")){
+        while (!userShape.toLowerCase().equals("rectangle") && !userShape.toLowerCase().equals("oval") && !userShape.toLowerCase().equals("triangle")){
             System.out.println("Invalid input, please select from the following: {Rectangle, Oval}.");
             userShape = scnr.nextLine();
         }
@@ -45,9 +45,7 @@ public class Main {
 
                 userSquare.draw();
                 System.out.println();
-                System.out.println("Shape Stats: ");                
-                System.out.println("The perimeter is: " + userSquare.getPerimeter());
-                System.out.println("The area is: " + userSquare.getArea());
+                userSquare.stats();
             }
 
             //Any non-squares (rectangles)
@@ -57,8 +55,7 @@ public class Main {
                 userRectangle.draw();
                 System.out.println();
                 System.out.println("Shape Stats: ");
-                System.out.println("The perimeter is: " + userRectangle.getPerimeter());
-                System.out.println("The area is: " + userRectangle.getArea());
+                userRectangle.stats();
             }
         }
 
@@ -71,9 +68,7 @@ public class Main {
 
                 userCircle.draw();
                 System.out.println();
-                System.out.println("Shape Stats: ");
-                System.out.println("The perimeter is: " + userCircle.getPerimeter());
-                System.out.println("The area is: " + userCircle.getArea());                
+                userCircle.stats();              
             }
 
             //Any non-circles (ovals)
@@ -82,10 +77,18 @@ public class Main {
 
                 userOval.draw();
                 System.out.println();
-                System.out.println("Shape Stats: ");
-                System.out.println("An estimate of this oval's perimeter is: " + userOval.getPerimeter());
-                System.out.println("The area is: " + userOval.getArea());
+                userOval.stats();
             }            
+        }
+
+        //Triangles
+        if (userShape.toLowerCase().equals("triangle")){
+            Triangle userTriangle = new Triangle(userColor, userChar, userLength, userWidth);
+
+            userTriangle.draw();
+            System.out.println();
+            userTriangle.stats();
+            
         }
 
     }
