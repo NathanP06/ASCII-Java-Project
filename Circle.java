@@ -6,18 +6,18 @@ public class Circle extends Oval {
 
     @Override
     public double getArea() {
-        return (((length / 2) ^ 2) * pi);
+        return (((base / 2) ^ 2) * pi);
     }
 
     @Override
     public double getPerimeter() {
-        return (pi * length);
+        return (pi * base);
     }
 
     @Override
     public void draw(){
         super.draw();        
-        System.out.println("Your oval is actually a circle! It's length and width are the same, making it a circle!");
+        System.out.println("Your oval is actually a circle! It's length and height are the same, making it a circle!");
     }
     
 }

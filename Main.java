@@ -21,11 +21,11 @@ public class Main {
         char userChar = scnr.nextLine().charAt(0);
 
         System.out.println("Please input the length of the shape you wish to create.");
-        int userLength = scnr.nextInt();
+        int userBase = scnr.nextInt();
         scnr.nextLine(); //Consumes new line
 
-        System.out.println("Please input the width of the shape you wish to create.");
-        int userWidth = scnr.nextInt();
+        System.out.println("Please input the height of the shape you wish to create.");
+        int userHeight = scnr.nextInt();
         scnr.nextLine(); //Consumes new line
 
         //Closes scanner & Prints new line
@@ -40,9 +40,8 @@ public class Main {
         if (userShape.toLowerCase().equals("rectangle")){
 
             //Checks if rectangle is a square (length = width)
-            if (userLength == userWidth){
-                Square userSquare = new Square(userColor, userChar, userLength);
-
+            if (userBase == userHeight){
+                Square userSquare = new Square(userColor, userChar, userBase);
                 userSquare.draw();
                 System.out.println();
                 userSquare.stats();
@@ -50,7 +49,7 @@ public class Main {
 
             //Any non-squares (rectangles)
             else {
-                Rectangle userRectangle = new Rectangle(userColor, userChar, userLength, userWidth);
+                Rectangle userRectangle = new Rectangle(userColor, userChar, userBase, userHeight);
 
                 userRectangle.draw();
                 System.out.println();
@@ -62,8 +61,8 @@ public class Main {
         if (userShape.toLowerCase().equals("oval")){
 
             //Checks if oval is a circle
-            if (userLength == userWidth){
-                Circle userCircle = new Circle(userColor, userChar, userLength);
+            if (userBase == userHeight){
+                Circle userCircle = new Circle(userColor, userChar, userBase);
 
                 userCircle.draw();
                 System.out.println();
@@ -72,7 +71,7 @@ public class Main {
 
             //Any non-circles (ovals)
             else {
-                Oval userOval = new Oval(userColor, userChar, userLength, userWidth);
+                Oval userOval = new Oval(userColor, userChar, userBase, userHeight);
 
                 userOval.draw();
                 System.out.println();
@@ -82,7 +81,7 @@ public class Main {
 
         //Triangles
         if (userShape.toLowerCase().equals("triangle")){
-            Triangle userTriangle = new Triangle(userColor, userChar, userLength, userWidth);
+            Triangle userTriangle = new Triangle(userColor, userChar, userBase, userHeight);
 
             userTriangle.draw();
             System.out.println();

@@ -1,16 +1,16 @@
 public class Rectangle extends Shape {
-    public Rectangle(String color, char character, int length, int width){
-        super(color, character, length, width);
+    public Rectangle(String color, char character, int base, int height){
+        super(color, character, base, height);
     }
 
     @Override
     public double getArea() {
-        return (length * width);
+        return (base * height);
     }
 
     @Override
     public double getPerimeter() {
-        return (2 * length + 2 * width);
+        return (2 * base + 2 * height);
     }
 
     //Creates the shape
@@ -19,16 +19,16 @@ public class Rectangle extends Shape {
         super.draw();
         
         //Prints the first line of the shape
-        for (int i = 0; i < length; i++){
+        for (int i = 0; i < base; i++){
             System.out.print(character + " ");
         }
 
         System.out.println();
 
         //Prints the middle section of the shape, leaving room for the final line.
-        for (int i = 1; i < width - 1; i++){
+        for (int i = 1; i < height - 1; i++){
             System.out.print(character); 
-            for (int j = 1; j < (length * 2) - 2; j++){
+            for (int j = 1; j < (base * 2) - 2; j++){
                 System.out.print(" ");
             }
             System.out.print(character);
@@ -36,7 +36,7 @@ public class Rectangle extends Shape {
         }
 
         //Prints the last line of the shape
-        for (int i = 0; i < length; i++){
+        for (int i = 0; i < base; i++){
             System.out.print(character + " ");
         }
 

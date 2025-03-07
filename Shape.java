@@ -1,15 +1,15 @@
 public abstract class Shape {
     protected String color; //will print the color as a text, since you cannot color change in terminal
     protected char character; //the character we will draw with
-    protected int length; //length of our bounding box
-    protected int width; //width of our bounding box
+    protected int base; //length of our bounding box
+    protected int height; //width of our bounding box
 
     //Creates a shape
-    public Shape(String color, char character, int length, int width){
+    public Shape(String color, char character, int base, int height){
         this.color = color;
         this.character = character;
-        this.length = length;
-        this.width = width;
+        this.base = base;
+        this.height = height;
     }
 
     //Two methods that are for all sub-classes of "shape".
